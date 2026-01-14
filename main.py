@@ -106,7 +106,7 @@ class Blockchain:
 try:
     blockchain= Blockchain()
     #first block
-    blockchain.new_transaction(sender='Aryan', receiver='Swarit', amount=10000)
+    blockchain.new_transaction(sender='X', receiver='Y', amount=10000)
     proof= blockchain.proof_work(blockchain.last_block['proof'])
     print(f"Mining proof: {proof}")
     blockchain.new_block(proof= proof)
@@ -115,4 +115,5 @@ try:
         
     logging.info("Blockchain valid: %s",blockchain.valid_chain())
 except Exception as e:
+
     logging.error(f"An error occured: {e}")
